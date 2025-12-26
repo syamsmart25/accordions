@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ'S</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="wapper">
+        <div class="faq-sec">
+            <div class="container">
+                <h2 class="text-heading">Mediation FAQs <strong>You May Have</strong> </h2>
+                <div class="faq-cnt">
+                    <div class="faq-rt">
+                        <div class="faq-img">
+                            <img src="./Vector Smart Object.webp" alt="faq img" width="633" height="662">
+                        </div>
+                    </div>
+                    <div class="faq-lft">
+
+                        <div class="questions-list">
+                        <div class="mediation-faqs active">
+                            <h3>
+                                <a data-target="#accordion-2" class="accordion-section-title"> Pellentesque Pretium Magna at Diam Bibendum ?</a>
+                            </h3>
+                            <div id="accordion-2" class="accordion-section-content open">
+                                <p>Donec rhoncus sapien ut fringilla facilisis. Sed nec diam quam. Nam porttitor ultricies nibh, at semper justo tincidunt eget. Vestibulum bibendum lectus justo, a congue est vestibulum non. Nam et ullamcorper mauris. </p>
+                            </div>
+                        </div>
+                        <div class="mediation-faqs">
+                            <h3>
+                                <a data-target="#accordion-3" class="accordion-section-title">Mauris Laoreet Egestas, Bibendum Lobortis ?</a>
+                            </h3>
+                            <div id="accordion-3" class="accordion-section-content">
+                                <p>Donec rhoncus sapien ut fringilla facilisis. Sed nec diam quam. Nam porttitor ultricies nibh, at semper justo tincidunt eget. Vestibulum bibendum lectus justo, a congue est vestibulum non. Nam et ullamcorper mauris. </p>
+
+                            </div>
+                        </div>
+                        <div class="mediation-faqs">
+                            <h3>
+                                <a data-target="#accordion-4" class="accordion-section-title">Donec Rhoncus Sapien ut Fringilla Facilisis ?</a>
+                            </h3>
+                            <div id="accordion-4" class="accordion-section-content">
+                                <p>Donec rhoncus sapien ut fringilla facilisis. Sed nec diam quam. Nam porttitor ultricies nibh, at semper justo tincidunt eget. Vestibulum bibendum lectus justo, a congue est vestibulum non. Nam et ullamcorper mauris. </p>
+
+                            </div>
+                        </div>
+                        <div class="mediation-faqs">
+                            <h3>
+                                <a data-target="#accordion-5" class="accordion-section-title">Nulla Vehicula Leo Urna, a Semper Leo ?</a>
+                            </h3>
+                            <div id="accordion-5" class="accordion-section-content">
+                                <p>Donec rhoncus sapien ut fringilla facilisis. Sed nec diam quam. Nam porttitor ultricies nibh, at semper justo tincidunt eget. Vestibulum bibendum lectus justo, a congue est vestibulum non. Nam et ullamcorper mauris. </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-btn">
+                        <a class="cmn-btn" href="#">view all faq<small>s</small></a>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+            <script type="text/javascript" src="js/owl.carousel.js"></script>
+            <script type="text/javascript" src="js/common.js"></script>
+            <script>
+
+ document.querySelectorAll(".accordion-section-title").forEach(title => {
+    title.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute("data-target");
+        const targetContent = document.querySelector(targetId);
+        const currentItem = this.closest(".mediation-faqs");
+
+        // Close others
+        document.querySelectorAll(".accordion-section-content").forEach(content => {
+            if (content !== targetContent) {
+                content.style.display = "none";
+                content.classList.remove("open");
+            }
+        });
+
+        document.querySelectorAll(".accordion-section-title").forEach(t => {
+            if (t !== this) t.classList.remove("active");
+        });
+
+        document.querySelectorAll(".mediation-faqs").forEach(item => {
+            if (item !== currentItem) item.classList.remove("active");
+        });
+
+        // Toggle current
+        if (targetContent.classList.contains("open")) {
+            targetContent.style.display = "none";
+            targetContent.classList.remove("open");
+            this.classList.remove("active");
+            currentItem.classList.remove("active");
+        } else {
+            targetContent.style.display = "block";
+            targetContent.classList.add("open");
+            this.classList.add("active");
+            currentItem.classList.add("active");
+        }
+    });
+});
+</script>
+
+
+</body>
+</html>

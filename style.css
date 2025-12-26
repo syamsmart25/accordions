@@ -1,0 +1,253 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./fonts/figtree-v9-latin-300.woff2') format('woff2');
+}
+ 
+@font-face {
+    font-display: swap;
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/figtree-v9-latin-regular.woff2') format('woff2');
+}
+ 
+@font-face {
+    font-display: swap;
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./fonts/figtree-v9-latin-500.woff2') format('woff2');
+}
+ 
+@font-face {
+    font-display: swap;
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./fonts/figtree-v9-latin-600.woff2') format('woff2');
+}
+ 
+@font-face {
+    font-display: swap;
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/figtree-v9-latin-700.woff2') format('woff2');
+}
+ 
+@font-face {
+    font-display: swap;
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 800;
+    src: url('./fonts/figtree-v9-latin-800.woff2') format('woff2');
+}
+ 
+@font-face {
+    font-display: swap;
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 900;
+    src: url('./fonts/figtree-v9-latin-900.woff2') format('woff2');
+}
+ 
+@font-face {
+    font-display: swap;
+    font-family: 'Antonio';
+    font-style: normal;
+    font-weight: 100;
+    src: url('./fonts/antonio-v22-latin-100.woff2') format('woff2');
+}
+ 
+@font-face {
+    font-display: swap;
+    font-family: 'Antonio';
+    font-style: normal;
+    font-weight: 200;
+    src: url('./fonts/antonio-v22-latin-200.woff2') format('woff2');
+}
+ 
+@font-face {
+    font-display: swap;
+    font-family: 'Antonio';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./fonts/antonio-v22-latin-300.woff2') format('woff2');
+}
+ 
+@font-face {
+    font-display: swap;
+    font-family: 'Antonio';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/antonio-v22-latin-regular.woff2') format('woff2');
+}
+ 
+@font-face {
+    font-display: swap;
+    font-family: 'Antonio';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./fonts/antonio-v22-latin-500.woff2') format('woff2');
+}
+ 
+@font-face {
+    font-display: swap;
+    font-family: 'Antonio';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./fonts/antonio-v22-latin-600.woff2') format('woff2');
+}
+ 
+@font-face {
+    font-display: swap;
+    font-family: 'Antonio';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/antonio-v22-latin-700.woff2') format('woff2');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+.faq-sec{
+    background: url(./faq-bg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 160px 0 100px;
+}
+.text-heading{
+    font-family: 'Antonio';
+    font-weight: 700;
+    font-size: 70px;
+    color: #dfae29;
+    letter-spacing: -1.4px;
+    line-height: 1.1;
+    text-align: center;
+}
+.text-heading strong{
+    color: #0b255a;
+}
+.faq-sec .text-heading{
+    margin-bottom: 60px;
+}
+.faq-cnt{
+    display: flex;
+    gap: 45px;
+}
+.faq-rt{
+    width: 42.4%;
+    padding-left: 38px;
+}
+.faq-img img{
+    width: 100%;
+    display: block;
+}
+.faq-lft{
+    width: 43.9%;
+}
+.mediation-faqs{
+    padding: 40px 0 10px 52px;
+    margin-right: 15px;
+    position: relative;    
+}
+.mediation-faqs::after{
+    position: absolute;
+    content: "";
+    width: 93%;
+    height: 1px;
+    background-color: #ddd6c7;
+    bottom: 1px;
+    left: 50px;
+    right: 0;
+}
+.questions-list {
+  counter-set: my-counter;
+   margin-bottom: 35px;
+}
+.mediation-faqs::before{
+    position: absolute;
+      counter-increment: my-counter;
+  content: "" counter(my-counter) ". ";
+    font-size: 50px;
+    font-family: 'Antonio';
+  font-weight: 700;
+  color: #b0b3b9;
+  line-height: 1;
+  left: 5px;
+  top: 39px;
+}
+.mediation-faqs a{
+    font-size: 30px;
+    font-family: 'Antonio';
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.6px;
+    color: #0b255a;
+    text-transform: capitalize;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 25px;
+}
+.mediation-faqs p{
+    font-size: 20px;
+    font-family: 'Figtree';
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0;
+    color: #0b255a;
+}
+.mediation-faqs a::before{
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 46px;
+    background: url(./sprites-01.png);
+    background-position: -304px -11px;
+    background-repeat: no-repeat;
+    right: 0;
+    bottom: 0;
+}
+.active a::before{
+    background-position: -352px -11px;
+}
+.active a{
+    color: #dfae29;
+}
+.faq-btn{
+    padding-left: 36px ;
+}
+a.cmn-btn{
+        display: inline-block;
+    font-family: 'Antonio';
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1;
+    letter-spacing: -0.5px;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
+    text-align: center;
+    padding: 23px 74px 22px 30px;
+    background-color: #dfae29;
+    background-image: url(./cmn-btn-img.webp);
+    background-repeat: no-repeat;
+    background-position: right 29px center;
+    text-decoration: none;
+}
+a.cmn-btn:hover {
+    background-color: #ebeef3;
+    color: #0b2559;
+}
